@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, UploadFile, File, Depends, HTTPException
 from app.schemas.nft import NFTCreate, NFT
 from app.models.nft import NFT as NFTModel
@@ -47,7 +46,7 @@ def read_nft(nft_id: int, db: Session = Depends(get_db)):
     db_nft = db.query(NFTModel).filter(NFTModel.id == nft_id).first()
     if db_nft is None:
         raise HTTPException(status_code=404, detail="NFT not found")
-=======
+
 from fastapi import APIRouter, UploadFile, File, Depends, HTTPException
 from app.schemas.nft import NFTCreate, NFT
 from app.models.nft import NFT as NFTModel
@@ -96,5 +95,5 @@ def read_nft(nft_id: int, db: Session = Depends(get_db)):
     db_nft = db.query(NFTModel).filter(NFTModel.id == nft_id).first()
     if db_nft is None:
         raise HTTPException(status_code=404, detail="NFT not found")
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return db_nft
