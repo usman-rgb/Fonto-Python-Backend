@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from app.database import SessionLocal
 from app.auth import get_current_user
@@ -55,7 +54,7 @@ def get_rankings(db: Session = Depends(get_db), current_user: User = Depends(get
         "user_id": current_user.id,  # Fixed: Changed from current_user["id"] to current_user.id
         "top_sellers": sellers_data,
         "top_buyers": buyers_data
-=======
+
 from fastapi import APIRouter, Depends, HTTPException
 from app.database import SessionLocal
 from app.auth import get_current_user
@@ -112,5 +111,5 @@ def get_rankings(db: Session = Depends(get_db), current_user: User = Depends(get
         "user_id": current_user.id,  # Fixed: Changed from current_user["id"] to current_user.id
         "top_sellers": sellers_data,
         "top_buyers": buyers_data
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     }
