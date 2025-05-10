@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import relationship
 from app.database import Base
@@ -9,7 +8,7 @@ class Wallet(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
     balance = Column(Float, default=0.0)
     address = Column(String)  # XRPL wallet address
-=======
+
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import relationship
 from app.database import Base
@@ -20,5 +19,5 @@ class Wallet(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
     balance = Column(Float, default=0.0)
     address = Column(String)  # XRPL wallet address
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     user = relationship("User", back_populates="wallet")
