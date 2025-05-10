@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.newsletter import Newsletter
 from app.models.newsletter import Newsletter as NewsletterModel
@@ -22,7 +21,7 @@ def subscribe_newsletter(newsletter: Newsletter, db: Session = Depends(get_db), 
     db.add(db_newsletter)
     db.commit()
     db.refresh(db_newsletter)
-=======
+
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.newsletter import Newsletter
 from app.models.newsletter import Newsletter as NewsletterModel
@@ -46,5 +45,5 @@ def subscribe_newsletter(newsletter: Newsletter, db: Session = Depends(get_db), 
     db.add(db_newsletter)
     db.commit()
     db.refresh(db_newsletter)
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return db_newsletter
