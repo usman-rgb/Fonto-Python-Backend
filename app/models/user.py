@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from app.database import Base
@@ -12,7 +12,7 @@ class User(Base):
     nfts = relationship("NFT", back_populates="owner")
     bids = relationship("Bid", back_populates="bidder")
     wallet = relationship("Wallet", back_populates="user", uselist=False)
-=======
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from app.database import Base
@@ -26,5 +26,5 @@ class User(Base):
     nfts = relationship("NFT", back_populates="owner")
     bids = relationship("Bid", back_populates="bidder")
     wallet = relationship("Wallet", back_populates="user", uselist=False)
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     notifications = relationship("Notification", back_populates="user")
