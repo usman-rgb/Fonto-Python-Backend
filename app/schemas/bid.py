@@ -1,3 +1,6 @@
+from pydantic import BaseModel
+from datetime import datetime
+
 class BidCreate(BaseModel):
     nft_id: int
     amount: float
