@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException, status
 from app.schemas.user import User, UserCreate, Token, PasswordResetRequest
 from app.models.user import User as UserModel
@@ -46,7 +45,7 @@ def reset_password_request(request: PasswordResetRequest, db: Session = Depends(
 
 @router.get("/me/", response_model=User)
 def read_users_me(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
-=======
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from app.schemas.user import User, UserCreate, Token, PasswordResetRequest
 from app.models.user import User as UserModel
@@ -94,5 +93,5 @@ def reset_password_request(request: PasswordResetRequest, db: Session = Depends(
 
 @router.get("/me/", response_model=User)
 def read_users_me(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return current_user
