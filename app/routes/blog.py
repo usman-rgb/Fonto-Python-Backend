@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.blog import Blog
 from app.models.blog import Blog as BlogModel
@@ -21,7 +20,7 @@ def read_blog(blog_id: int, db: Session = Depends(get_db), current_user: User = 
     db_blog = db.query(BlogModel).filter(BlogModel.id == blog_id).first()
     if db_blog is None:
         raise HTTPException(status_code=404, detail="Blog not found")
-=======
+
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.blog import Blog
 from app.models.blog import Blog as BlogModel
@@ -44,5 +43,5 @@ def read_blog(blog_id: int, db: Session = Depends(get_db), current_user: User = 
     db_blog = db.query(BlogModel).filter(BlogModel.id == blog_id).first()
     if db_blog is None:
         raise HTTPException(status_code=404, detail="Blog not found")
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return db_blog
