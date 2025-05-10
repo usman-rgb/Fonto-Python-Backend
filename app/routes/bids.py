@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.bid import BidCreate, Bid
 from app.models.bid import Bid as BidModel
@@ -29,7 +28,7 @@ def read_bid(bid_id: int, db: Session = Depends(get_db)):
     db_bid = db.query(BidModel).filter(BidModel.id == bid_id).first()
     if db_bid is None:
         raise HTTPException(status_code=404, detail="Bid not found")
-=======
+
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.bid import BidCreate, Bid
 from app.models.bid import Bid as BidModel
@@ -60,5 +59,5 @@ def read_bid(bid_id: int, db: Session = Depends(get_db)):
     db_bid = db.query(BidModel).filter(BidModel.id == bid_id).first()
     if db_bid is None:
         raise HTTPException(status_code=404, detail="Bid not found")
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return db_bid
