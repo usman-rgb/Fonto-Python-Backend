@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.help import HelpQuestion
 from app.models.help import HelpQuestion as HelpModel
@@ -21,7 +20,7 @@ def read_help(question_id: int, db: Session = Depends(get_db), current_user: Use
     db_help = db.query(HelpModel).filter(HelpModel.id == question_id).first()
     if db_help is None:
         raise HTTPException(status_code=404, detail="Help question not found")
-=======
+
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.help import HelpQuestion
 from app.models.help import HelpQuestion as HelpModel
@@ -44,5 +43,5 @@ def read_help(question_id: int, db: Session = Depends(get_db), current_user: Use
     db_help = db.query(HelpModel).filter(HelpModel.id == question_id).first()
     if db_help is None:
         raise HTTPException(status_code=404, detail="Help question not found")
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return db_help
