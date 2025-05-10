@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic
+python-multipart
+python-dotenv
+xrpl-py
+ipfshttpclient
+email-validator
+=======
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic
+python-multipart
+python-dotenv
+xrpl-py
+ipfshttpclient
+email-validator
+>>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+requests
