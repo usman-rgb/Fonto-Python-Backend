@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from pydantic import BaseModel, EmailStr
 
 class UserCreate(BaseModel):
@@ -21,7 +20,7 @@ class Token(BaseModel):
     token_type: str
 
 class PasswordResetRequest(BaseModel):
-=======
+
 from pydantic import BaseModel, EmailStr
 
 class UserCreate(BaseModel):
@@ -44,5 +43,5 @@ class Token(BaseModel):
     token_type: str
 
 class PasswordResetRequest(BaseModel):
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     email: EmailStr
