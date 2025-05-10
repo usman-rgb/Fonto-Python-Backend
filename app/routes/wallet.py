@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.wallet import Wallet
 from app.models.wallet import Wallet as WalletModel
@@ -21,7 +20,7 @@ def get_wallet(db: Session = Depends(get_db), current_user: User = Depends(get_c
     db_wallet = db.query(WalletModel).filter(WalletModel.user_id == current_user["id"]).first()
     if db_wallet is None:
         raise HTTPException(status_code=404, detail="Wallet not found")
-=======
+
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.wallet import Wallet
 from app.models.wallet import Wallet as WalletModel
@@ -44,5 +43,5 @@ def get_wallet(db: Session = Depends(get_db), current_user: User = Depends(get_c
     db_wallet = db.query(WalletModel).filter(WalletModel.user_id == current_user["id"]).first()
     if db_wallet is None:
         raise HTTPException(status_code=404, detail="Wallet not found")
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return db_wallet
