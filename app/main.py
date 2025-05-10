@@ -21,7 +21,7 @@ app = FastAPI()
 # CORS Middleware to allow requests from frontend (Hostinger)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://your-hostinger-domain.com"],  # Replace with your Hostinger domain
+    allow_origins=["https://pintrasin.com"],  # Updated with your domain
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
