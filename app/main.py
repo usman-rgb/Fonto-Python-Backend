@@ -43,7 +43,6 @@ app.include_router(notifications_router, prefix="/api", tags=["notifications"])
 
 @app.get("/")
 def read_root():
-=======
 from fastapi import FastAPI
 from app.routes import (
     auth_router,
