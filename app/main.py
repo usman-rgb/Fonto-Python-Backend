@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -79,5 +78,4 @@ app.include_router(notifications_router, prefix="/api", tags=["notifications"])
 
 @app.get("/")
 def read_root():
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
     return {"message": "Welcome to Fonto Python Backend"}
