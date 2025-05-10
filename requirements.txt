@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 fastapi
 uvicorn
 sqlalchemy
@@ -11,7 +10,6 @@ python-dotenv
 xrpl-py
 ipfshttpclient
 email-validator
-=======
 fastapi
 uvicorn
 sqlalchemy
@@ -24,5 +22,4 @@ python-dotenv
 xrpl-py
 ipfshttpclient
 email-validator
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
 requests
