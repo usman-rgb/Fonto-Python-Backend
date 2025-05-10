@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.activity import Activity
 from app.models.activity import Activity as ActivityModel
@@ -19,7 +18,7 @@ def get_db():
 @router.get("/activities/", response_model=list[Activity])
 def get_activities(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     db_activities = db.query(ActivityModel).all()
-=======
+
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.activity import Activity
 from app.models.activity import Activity as ActivityModel
@@ -40,5 +39,5 @@ def get_db():
 @router.get("/activities/", response_model=list[Activity])
 def get_activities(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     db_activities = db.query(ActivityModel).all()
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return db_activities
