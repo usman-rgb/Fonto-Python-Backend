@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.collection import CollectionCreate, Collection
 from app.models.collection import Collection as CollectionModel
@@ -32,7 +31,7 @@ def read_collection(collection_id: int, db: Session = Depends(get_db)):
     db_collection = db.query(CollectionModel).filter(CollectionModel.id == collection_id).first()
     if db_collection is None:
         raise HTTPException(status_code=404, detail="Collection not found")
-=======
+
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.collection import CollectionCreate, Collection
 from app.models.collection import Collection as CollectionModel
@@ -66,5 +65,5 @@ def read_collection(collection_id: int, db: Session = Depends(get_db)):
     db_collection = db.query(CollectionModel).filter(CollectionModel.id == collection_id).first()
     if db_collection is None:
         raise HTTPException(status_code=404, detail="Collection not found")
->>>>>>> 4a87b24658b42a81de51559557417a96c9a3e5f7
+
     return db_collection
